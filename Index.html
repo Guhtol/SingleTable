@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Exemplo</title>
+	<meta charset="utf-8" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Exemplo</h1>
+		<hr>
+		<div class="row">
+			<form action="" class="col-sm-6">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<label for="">Nome</label>
+						<input type="text" id="Nome" name="Nome" class="form-control" />
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="form-group">
+						<label for="">Numero</label>
+						<input type="number" id="Numero" class="form-control" />
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="form-group">
+						<label for="">Email</label>
+						<input type="email" id="Email" clas="Email" class="form-control" />
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="form-group">
+						<input type="button" id="Enviar" class="btn btn-success" value="Salvar" />
+						<input type="button" id="Enviar2" class="btn btn-success" value="Salvar" />
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="row">
+			<table class="table table-responsive table-striped table-hover">
+				<thead>
+					<tr>
+						
+						<td><strong>Nome</strong></td>
+						<td><strong>Numero</strong></td>
+						<td><strong>Email</strong></td>
+						<td><strong>Ação</strong></td>
+						
+					</tr>
+				</thead>
+				<tbody id="tbody">
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/SingleTable.js"></script>
+	<script>
+		
+	//   var table = new Table($("#Nome"),$("#Numero"),$("#Email"));
+	//   $("#Enviar").click(function(){
+	// 	  	  table.InsertLine("ListaFrango",$("#tbody"));
+	//   });
+	//   var table2 = new Table($("#Nome"),$("#Numero"),$("#Email"));
+	//    $("#Enviar2").click(function(){		    
+	// 	  	  table2.InsertLine("ListaCoxinha",$("#tbody"));
+	//   });
+	  var table1 = new Table("Nome","Numero","Email");
+	    $("#Enviar").click(function(){
+		  	  table1.InsertLine("ListaFrango","tbody");
+	  });
+	   var table2 = new Table("Nome","Numero","Email");
+	    $("#Enviar2").click(function(){
+		  	  table2.InsertLine("ListaPanetone","tbody");
+	  });
+	  	  
+	</script>
+</body>
+
+</html>
